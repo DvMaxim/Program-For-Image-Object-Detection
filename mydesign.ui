@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="windowModality">
+   <enum>Qt::NonModal</enum>
+  </property>
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1240</width>
+    <height>868</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="contextMenuPolicy">
+   <enum>Qt::PreventContextMenu</enum>
+  </property>
+  <property name="windowTitle">
+   <string>Neural network for Image Object Detection</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>py-logo.png</normaloff>py-logo.png</iconset>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="pbtnDetectOb">
+    <property name="geometry">
+     <rect>
+      <x>980</x>
+      <y>680</y>
+      <width>201</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Georgia</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Detect objects</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pbtnOpenIm">
+    <property name="geometry">
+     <rect>
+      <x>980</x>
+      <y>750</y>
+      <width>201</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Georgia</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Open image</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lblPicture">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>10</y>
+      <width>891</width>
+      <height>801</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>940</x>
+      <y>10</y>
+      <width>271</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Georgia</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Detected classes</string>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::AutoText</enum>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QTableWidget" name="twDetectedClasses">
+    <property name="geometry">
+     <rect>
+      <x>940</x>
+      <y>60</y>
+      <width>271</width>
+      <height>591</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1240</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuDetectionableClasses">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionDetectionable_classes"/>
+    <addaction name="actionAbout_program"/>
+   </widget>
+   <widget class="QMenu" name="menuExit">
+    <property name="title">
+     <string>Exit</string>
+    </property>
+    <addaction name="actionClose_program"/>
+   </widget>
+   <addaction name="menuDetectionableClasses"/>
+   <addaction name="menuExit"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionThere_are_80_possible_objects_that_you_can_detect_with_the_ObjectDetection_class_and_they_are_as_seen_below_person_bicycle_car_motorcycle_airplane_bus_train_truck_boat_traffic_light_fire_hydrant_stop_sign_parking_meter_bench_bird_cat_dog_horse_sheep_cow_elephant_bear_zebra_giraffe_backpack_umbrella_handbag_tie_suitcase_frisbee_skis_snowboard_sports_ball_kite_baseball_bat_baseball_glove_skateboard_surfboard_tennis_racket_bottle_wine_glass_cup_fork_knife_spoon_bowl_banana_apple_sandwich_orange_broccoli_carrot_hot_dog_pizza_donot_cake_chair_couch_potted_plant_bed_dining_table_toilet_tv_laptop_mouse_remote_keyboard_cell_phone_microwave_oven_toaster_sink_refrigerator_book_clock_vase_scissors_teddy_bear_hair_dryer_toothbrush">
+   <property name="text">
+    <string>There are 80 possible objects that you can detect with the
+ObjectDetection class, and they are as seen below.
+
+    person,   bicycle,   car,   motorcycle,   airplane,
+    bus,   train,   truck,   boat,   traffic light,   fire hydrant,   stop_sign,
+    parking meter,   bench,   bird,   cat,   dog,   horse,   sheep,   cow,   elephant,   bear,   zebra,
+    giraffe,   backpack,   umbrella,   handbag,   tie,   suitcase,   frisbee,   skis,   snowboard,
+    sports ball,   kite,   baseball bat,   baseball glove,   skateboard,   surfboard,   tennis racket,
+    bottle,   wine glass,   cup,   fork,   knife,   spoon,   bowl,   banana,   apple,   sandwich,   orange,
+    broccoli,   carrot,   hot dog,   pizza,   donot,   cake,   chair,   couch,   potted plant,   bed,
+    dining table,   toilet,   tv,   laptop,   mouse,   remote,   keyboard,   cell phone,   microwave,
+    oven,   toaster,   sink,   refrigerator,   book,   clock,   vase,   scissors,   teddy bear,   hair dryer,
+    toothbrush.</string>
+   </property>
+  </action>
+  <action name="actionDetectionable_classes">
+   <property name="text">
+    <string>Detectionable classes</string>
+   </property>
+  </action>
+  <action name="actionAbout_program">
+   <property name="text">
+    <string>About program</string>
+   </property>
+  </action>
+  <action name="actionClose_program">
+   <property name="text">
+    <string>Close program</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
